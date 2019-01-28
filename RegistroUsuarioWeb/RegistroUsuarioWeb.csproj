@@ -73,14 +73,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Consulta\cUsuario.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="jquery\jquery-1.10.2.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Registro\rUsuario.aspx" />
+    <Content Include="Resources\Comercial.jpg" />
+    <Content Include="Resources\LogoL&amp;M.png" />
+    <Content Include="Resources\multy-user.png" />
+    <Content Include="Resources\user.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consulta\cUsuario.aspx.cs">
+      <DependentUpon>cUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consulta\cUsuario.aspx.designer.cs">
+      <DependentUpon>cUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro\rUsuario.aspx.cs">
+      <DependentUpon>rUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro\rUsuario.aspx.designer.cs">
+      <DependentUpon>rUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -88,6 +127,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Utilidades\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -101,9 +141,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Consulta\" />
     <Folder Include="Models\" />
-    <Folder Include="Registro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{40F17A33-68E3-4787-A903-5C10C204EFE5}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{4B2B1039-3C93-415D-B67B-2CFC35D3B69A}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
