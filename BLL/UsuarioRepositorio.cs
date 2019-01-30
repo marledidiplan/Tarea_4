@@ -10,20 +10,23 @@ using System.Web.UI;
 
 namespace BLL
 {
-   public class UsuarioRepositorio : RepositorioBase<Usuario>
+    public class UsuarioRepositorio : RepositorioBase<Usuario>
     {
 
+
+        public bool Authentic(string nombreUsuario, string clave)
+        {
+            Expression<Func<Usuario, bool>> filtrar = f => true;
+            bool paso = false;
+            filtrar = m => m.NombreUsuario.Equals(nombreUsuario) && m.Clave.Equals(clave);
+            if (this.GetList(filtrar).Count() != 0)
+            {
+                paso = true;
+            }
+
+            return paso;
+        }
     }
-    //public static void Authentic(string email, string clave, Page page)
-    //{
-    //    RepositorioBase<Usuario> repo = new RepositorioBase<Usuario>();
-    //    Usuario usu = new Usuario();
-    //    Expression<Func<Usuario, bool>> filtrar = f => true;
-
-    //    filtrar = m => m.Email.Equals(email) && m.Clave.Equals(clave);
-    //    if (repo.GetList(filtrar).Count() != 0)
-    //        FormsAuthentication.RedirectFromLoginPage(usu.Email, true);
-            
-
-    //}
 }
+
+

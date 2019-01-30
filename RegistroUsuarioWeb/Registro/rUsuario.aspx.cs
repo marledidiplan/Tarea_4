@@ -26,7 +26,10 @@ namespace RegistroUsuarioWeb.Registro
             usuario.Clave = ClaveTextBox.Text;
             usuario.ConfirmarClave = CclaveTextBox.Text;
             usuario.Email = EmailTextBox.Text;
-            usuario.Fecha = Util.ToDate(FechaTextBox.Text);
+            DateTime date;
+            bool resul = DateTime.TryParse(FechaTextBox.Text, out date);
+            if (resul == true)
+                usuario.Fecha = date;
             usuario.Telefono = TelefonoTextBox.Text;
             usuario.Cedula = CedulaTextBox.Text;
 
@@ -46,14 +49,15 @@ namespace RegistroUsuarioWeb.Registro
                 paso = repo.Modificar(usuario);
             if (paso)
             {
-                Response.Write("<script> text('Guardado')</script>");
+                Response.Write("<script> alert('No se pudo Guardar')</script>");
+               
                 Clean();
 
 
             }
             else
             {
-                Response.Write("<script> alert('No se pudo Guardar')</script>");
+                Response.Write("<script> text('Guardado')</script>");
             }
         }
 
@@ -92,7 +96,9 @@ namespace RegistroUsuarioWeb.Registro
             }
         }
 
-        protected void BuscarBtton_Click(object sender, EventArgs e)
+        
+
+        protected void BuscarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Usuario> repo = new RepositorioBase<Usuario>();
             Usuario usuario = new Usuario();

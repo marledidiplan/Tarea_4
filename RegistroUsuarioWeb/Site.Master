@@ -33,13 +33,13 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Consulta Usuario</a>
+                                <a class="dropdown-item" href="\Consulta\cUsuario.aspx">Consulta Usuario</a>
                             </div>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
                         </li>
-                        <%--<asp:Button ID="cerrarSesButton" class="btn btn-danger my-2 my-sm-0" type="submit" runat="server" Text="Cerrar Sesión" OnClick="cerrarSesButton_Click" />--%>
+                        <asp:Button ID="CerrarButton" class="btn btn-success my-1 my-sm-1" type="submit" runat="server" Text="Sign off" OnClick="CerrarButton_Click" />
                     </ul>
                 </div>
             </nav>

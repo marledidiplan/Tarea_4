@@ -74,6 +74,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Consulta\cUsuario.aspx" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
     <Content Include="Global.asax" />
     <Content Include="jquery\jquery-1.10.2.js" />
     <Content Include="jquery\jquery-ui-1.10.4.custom.js" />
@@ -85,6 +87,13 @@
     <Content Include="Resources\LogoL&amp;M.png" />
     <Content Include="Resources\multy-user.png" />
     <Content Include="Resources\user.png" />
+    <Content Include="content\toastr.scss" />
+    <Content Include="content\toastr.less" />
+    <None Include="Scripts\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.3.js" />
+    <Content Include="Scripts\jquery-1.6.3.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

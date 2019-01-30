@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="cUsuario.aspx.cs" Inherits="RegistroUsuarioWeb.Consulta.cUsuario" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="cUsuario.aspx.cs" Inherits="RegistroUsuarioWeb.Consulta.cUsuario" %>
 
 <asp:Content ID="content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -25,8 +25,19 @@
         <asp:TextBox ID="CriterioTextbox"  runat="server"></asp:TextBox>
     </div>
     <div class="col-md-4">
-          <asp:Button ID="BuscarBtton" runat="server" Text="Buscar" class="btn btn-info btn" OnClick="BuscarBtton_Click"/>
+          <asp:Button ID="BuscarBotton" runat="server" Text="Buscar" class="btn btn-info btn" OnClick="BuscarBotton_Click"/>
     </div>
+    <%--<div class="form-gruop col-md-12">
+        <label for="DesdeTextbox" class="col-md-1 control-label input-sm">Desde:</label>
+                    <div class="col-md-3">
+                        <asp:TextBox ID="DesdeTextBox" type="date" runat="server" class="form-control input-sm"></asp:TextBox>
+                 
+           <label for="HastaTextbox" class="col-md-1 control-label input-sm">Hasta:</label>
+                    <div class="col-md-3">
+                        <asp:TextBox ID="HastaTextBox" type="date" runat="server" class="form-control input-sm"></asp:TextBox>   
+                    </div>
+
+        </div>--%>
     <div>
         <asp:GridView ID="uGridView" runat="server" class="table table-condensed table-bordered table-responsive" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="Gray" />

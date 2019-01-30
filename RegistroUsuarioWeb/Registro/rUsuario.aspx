@@ -13,13 +13,13 @@
                     <div class="col-md-8">
                         <asp:Label ID="Label2" runat="server" Text="Id:"></asp:Label>
                         <asp:TextBox ID="IdTextBox" class="form-control col-md-3" Text="0" type="number" runat="server"></asp:TextBox>
-                        <asp:Button ID="busscarButton" class="form-control btn btn-info col-md-2 btn-sm" runat="server" Text="Buscar" />
+                        <asp:Button ID="BuscarButton" class="form-control btn btn-info col-md-2 btn-sm" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
                     </div>
                 </div>
                 <div class="form-gruop col-md-12">
                     <label for="FechaTextbox" class="col-md-3 control-label input-sm">Fecha:</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="FechaTextBox" type="date" runat="server" class="form-control input-sm"></asp:TextBox>
+                        <asp:TextBox ID="FechaTextBox" type="date" runat="server" class="form-control input-sm" ReadOnly="True"></asp:TextBox>
                         <br />
                     </div>
                 </div>
@@ -47,14 +47,14 @@
                 <div class="form-gruop col-md-12">
                     <label for="ClaveTextbox" class="col-md-3 control-label input-sm">Clave:</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="ClaveTextBox" runat="server" class="form-control input-sm"></asp:TextBox>
+                        <asp:TextBox ID="ClaveTextBox" runat="server"  Type="password" class="form-control input-sm"></asp:TextBox>
                         <br />
                     </div>
                 </div>
                 <div class="form-gruop col-md-12">
                     <label for="CclaveTextbox" class="col-md-3 control-label input-sm">Confirmar Clave:</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="CclaveTextBox" runat="server" class="form-control input-sm"></asp:TextBox>
+                        <asp:TextBox ID="CclaveTextBox" runat="server" Type="password"  class="form-control input-sm"></asp:TextBox>
                         <br />
                     </div>
                 </div>
